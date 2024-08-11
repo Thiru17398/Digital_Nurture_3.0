@@ -22,6 +22,19 @@
       <version>4.2.6.RELEASE</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>5.3.9</version>
+    </dependency>
+
+    <!-- AspectJ Weaver dependency -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>5.3.9</version>
+    </dependency>
+
   </dependencies>
 
   <build>
