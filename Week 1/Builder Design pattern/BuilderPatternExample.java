@@ -16,7 +16,7 @@ o	Ensure that the Computer class has a private constructor that takes the Builde
 o	Create a test class to demonstrate the creation of different configurations of Computer using the Builder pattern.
 
 */
-import java.util.*;
+
 
 class Computer{
     private final String CPU;
@@ -49,7 +49,7 @@ class Computer{
         private final String RAM;
         private final String storage;
         // Optional attributes
-        private String GPU;
+        private String GPU = "No Dedicated Graphics Card is Built";
 
         // Constructor for required attributes
         public Builder(String CPU, String RAM, String storage) {
@@ -91,6 +91,6 @@ public class BuilderPatternExample {
         System.out.println("CPU: " + officePC.getCPU());
         System.out.println("RAM: " + officePC.getRAM());
         System.out.println("Storage: " + officePC.getStorage());
-        System.out.println("GPU: " + officePC.getGPU()); // This will be null since GPU is optional
+        System.out.println("GPU: " + officePC.getGPU());
     }
 }
