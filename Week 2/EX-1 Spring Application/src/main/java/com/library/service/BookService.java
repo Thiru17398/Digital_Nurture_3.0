@@ -12,4 +12,8 @@ public class BookService {
     public void displayBooks(){
         bookRepository.getBooks().forEach(System.out::println);
     }
+
+    public int getBooksLength(){
+        return bookRepository.getBooks().size();
+    }
 }

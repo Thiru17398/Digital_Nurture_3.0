@@ -10,9 +10,8 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
         BookService bookService = (BookService) context.getBean("bookService");
-
         bookService.displayBooks();
+        System.out.println("Number of Books : " + bookService.getBooksLength());
     }
 }

@@ -10,7 +10,6 @@ public class BookService {
     private BookRepository bookRepository;
 
     // Constructor injection
-    @Autowired
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
