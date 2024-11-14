@@ -4,6 +4,7 @@ package com.example.EmployeeManagementSystem.controller;
 import com.example.EmployeeManagementSystem.entity.Employee;
 import com.example.EmployeeManagementSystem.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,5 +48,10 @@ public class EmployeeController {
             employeeRepository.deleteById(id);
             return ResponseEntity.noContent().build();
         }).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/search")
+    public List<Employee> getEmployeesByName(@RequestParam("name") String name){
+        return this.employeeRepository.findByName(name);
     }
 }
